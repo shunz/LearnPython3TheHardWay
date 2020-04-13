@@ -1,13 +1,22 @@
-# Exercise 13: Parameters, Unpacking, Variables
+# Exercise 14: Prompting And Passing
 
-from sys import argv  # argv = argument variableq
-# read the WYSS section for how to run this
-script, first, second, third = argv
+from sys import argv
+script, user_name = argv
+prompt = '>'
 
-print("The script is called:", script)
-print("Your first variable is:", first)
-print("Your second variable is:", second)
-print("Your third variable is:", third)
-      
-# run this file in command line
-# python3 ex13.py 1st 2nd 3rd
+print(f"Hi {user_name}, I'm the {script} script.")
+print("I'd like to ask you a few questions.")
+print(f"Do you like me {user_name}?")
+likes = input(prompt)
+
+print(f"Where do you live {user_name}?")
+lives = input(prompt)
+
+print("What kind of computer do you have?")
+computer = input(prompt)
+
+print(f"""
+Alright, so you said {likes} about liking me.
+You live in {lives}. Not sure where that is.
+And you have a {computer} computer. Nice.
+""")

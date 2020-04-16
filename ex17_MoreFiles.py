@@ -23,3 +23,12 @@ print("Allright, all done.")
 
 out_file.close()
 in_file.close()
+
+
+'''First make a sample file in the command line'''
+# echo "This is a test file." > test.txt
+
+'''then look at it'''
+# cat test.txt
+
+'''now run our script on it'''

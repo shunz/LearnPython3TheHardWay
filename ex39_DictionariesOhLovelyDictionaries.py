@@ -28,7 +28,7 @@ print(stuff)
 
 
 # create a mapping of state of abbreviation
-state = {
+states = {
     'Oregon': 'OR',
     'Florida': 'FL',
     'California': 'CA',
@@ -47,7 +47,47 @@ cities = {
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
+#
+def split():
+    print('-' * 30)
+
 # print out some cities
-print('-' * 30)
+split()
 print("NY State has: ", cities['NY'])
 print("OR State has: ", cities['OR'])
+
+# print some states
+split()
+print("Michigan's abbreviation is: ", states['Michigan'])
+print("Florida's abbreviation is: ", states['Florida'])
+
+# do it by using the state then cities dict
+split()
+print("Michigan has: ", cities[states['Michigan']])
+print("Florida has: ", cities[states['Florida']])
+
+# print every state abbreviation
+split()
+for state, abbrev in list(states.items()):
+    print(f"{state} is abbreviated {abbrev}")
+
+# print every city in states
+split()
+for abbrev, city in list(cities.items()):
+    print(f"{abbrev} has the city {city}")
+
+# now do both at the same time
+split()
+for state, abbrev in list(states.items()):
+    print(f"{state} state is abbreviated {abbrev}, and has city {cities[abbrev]}")
+
+split()
+
+# safely get a abbreviation by state that might not be there
+state = states.get('Texas')
+if not state:
+    print("Sorry, no Texas.")
+
+# get a city with a default value
+city = cities.get('TX', 'Does Not Exist')
+print(f"The city for the state 'TX' is: {city}")

@@ -73,3 +73,14 @@ crouse = Salmon()
 
 # harry is-a Halibut()
 harry = Halibut()
+
+
+
+# 在 Python 3 中，并不需要在类名后添加(object)，但 Python 圈内人相信「显式优于隐式」。
+# 加上(object)仅相当于多写了简单的额外文档，并不会影响类的工作方式
+# 在 Python 2 中，这两种方式定义的类是有区别的。如果用了(object)，表示定义的类的类型是object。
+# 只要记住class Name(object)的意思是「这是一个基本的简单类」就行了。
+
+""" Python super() 函数
+https://www.runoob.com/python/python-func-super.html
+"""

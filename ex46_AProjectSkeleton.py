@@ -12,6 +12,7 @@
  • mkdir ~/.venvs  # 创建一个目录，用来存储所有的虚拟环境
  • virtualenv --system-site-packages ~/.venvs/lpthw  # 执行virtualenv，让它
    包含系统站点包，然后在lpthw目录中创建一个虚拟环境
+ • python3 -m venv lpthw  # 用标准库内置的venv模块创建虚拟环境
  • . ~/.venvs/lpthw/bin/activate  # 用source命令激活lpthw虚拟环境(用deactivate
    命令退出)
  • which python/python3 查看python在虚拟环境中的安装目录
@@ -25,6 +26,9 @@
  • mkdir bin NAME tests docs  # 同时创建多个目录
  • touch NAME/__init__.py
  • touch tests/__init__.py
+ • vi setup.py  # 内容参考书
+ • vi tests/NAME_tests.py  # 内容参考书
+ • python3 -m "nose"  # 测试配置，如果有报错，就是上述内容有误
 """
 
 
